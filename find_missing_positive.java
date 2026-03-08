@@ -11,6 +11,6 @@ class Solution {
                 return i;
             }
         }
-        return nums.length+1;
+        return nums.length+1; //return next positive number
     }
 }
