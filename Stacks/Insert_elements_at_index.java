@@ -24,3 +24,4 @@ public class Insert_at_Bottom_or_anyIndex {
         System.out.println(st);
     }
 }
+//if idx is out of bound then elem is inserted at end
