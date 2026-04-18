@@ -1,0 +1,20 @@
+import java.util.*;
+
+class Solution {
+    public List<String> commonChars(String[] words) {
+        List<String> res = new ArrayList<>();
+        for (char c : words[0].toCharArray()) {
+            boolean ok = true;
+            for (int i = 1; i < words.length; i++) {
+                int idx = words[i].indexOf(c);
+                if (idx == -1) {
+                    ok = false;
+                    break;
+                }
+                words[i] = words[i].substring(0, idx) + words[i].substring(idx + 1);
+            }
+            if (ok) res.add("" + c);
+        }
+        return res;
+    }
+}
